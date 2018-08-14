@@ -5,7 +5,8 @@ class App extends Component {
 
   state = {
     userName: "Name",
-    content: "Review or Comment"
+    content: "Review or Comment",
+    reviews: []
   }
 
   handleUserNameChange = (event) => { 
@@ -22,7 +23,13 @@ class App extends Component {
 
   submitReview = (e)  => {
     e.preventDefault();
-
+    fetch('http://localhost:3001/reviews', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state)
+    })
   }
 
   render() {
@@ -42,6 +49,13 @@ class App extends Component {
       </div>
     );
   }
+
+  componentDidMount() {
+
+  }
+
+
+
 }
 
 export default App;

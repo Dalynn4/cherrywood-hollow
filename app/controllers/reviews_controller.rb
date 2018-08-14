@@ -7,10 +7,16 @@ class ReviewsController < ApplicationController
     )
   end
 
-  def new
+  def create
+    
+    @review = Review.create(:user_name => params[:userName], :content => params[:content])
+    render json: @review
   end 
 
-  def show
-  end
+private
+
+def review_params
+  params.require(:review).permit(:userName, :content)
+end
   
 end
