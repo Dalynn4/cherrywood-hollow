@@ -7,7 +7,7 @@ import Trailer from './components/Trailer';
 import ReviewsPage from './components/ReviewsPage';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import reviewsReducer from './reducers/reviewsReducer.js'
