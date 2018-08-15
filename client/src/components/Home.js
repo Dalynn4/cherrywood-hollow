@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css';
 
 
-class App extends Component {
+class Home extends Component {
 
   render() {
     return (
@@ -15,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;

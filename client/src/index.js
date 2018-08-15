@@ -9,9 +9,10 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 import reviewsReducer from './reducers/reviewsReducer.js'
 
-const store = createStore(reviewsReducer)
+const store = createStore(reviewsReducer, applyMiddleware(thunk));
 
 
 ReactDOM.render((
