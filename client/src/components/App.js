@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 
+
 class App extends Component {
 
   state = {
@@ -45,9 +46,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Cherrywood Hollow</h1>
         </header>
-        <ol>
-          {this.state.reviews.map(review =><li key={review.id}>Name:{review.user_name} Content:{review.content}</li>)}
-          </ol>
+  
         <h2 className="App-intro">Review Form</h2>
           <form onSubmit={this.submitReview}>
             <p>Name:</p>
@@ -60,15 +59,7 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/reviews')
-    .then(response => response.json())
-    .then(data => {
-      this.setState ({
-        reviews: data
-      })
-    })
-  }
+
   
 }
 
