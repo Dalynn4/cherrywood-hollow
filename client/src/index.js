@@ -8,7 +8,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render((
 <Router>
-  <Route path="/" component={App} />
+  <React.Fragment>
+    <Menu />
+    <Route path="/" component={App} />
+  </React.Fragment>
 </Router>),
 document.getElementById('root'));
 registerServiceWorker();

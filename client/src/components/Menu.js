@@ -1,14 +1,45 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const link = {
+  width: '300px',
+  padding: '25px',
+  margin: '10 60px 60px',
+  background: 'darkblue',
+  color: 'red',
+}
+
 
 const Menu = () => {
   return (
     <div>
-      <ul className="Menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/trailer">Trailer</a></li>
-        <li><a href="/reviews">Reviews</a></li>
-      </ul>
+      <div className="Menu">
+        <NavLink
+        to="/"
+        exact
+        style={link}
+        activestyle={{
+          background: 'black'
+        }}
+        >Home</NavLink>
+        <NavLink
+        to="/trailer"
+        exact
+        style={link}
+        activestyle={{
+          background: 'black'
+        }}
+        >Trailer</NavLink>
+        <NavLink
+        to="/reviews"
+        exact
+        style={link}
+        activestyle={{
+          background: 'black'
+        }}
+        >Reviews</NavLink>
       </div>
+    </div>
   )
 }
 

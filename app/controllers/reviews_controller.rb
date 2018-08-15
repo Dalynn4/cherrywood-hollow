@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    
     @review = Review.create(:user_name => params[:userName], :content => params[:content])
     render json: @review
   end 
