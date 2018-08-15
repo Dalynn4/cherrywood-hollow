@@ -29,6 +29,13 @@ class App extends Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(this.state)
+    });
+    fetch('http://localhost:3001/reviews')
+    .then(response => response.json())
+    .then(data => {
+      this.setState ({
+        reviews: data
+      })
     })
   }
 
@@ -38,6 +45,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Cherrywood Hollow</h1>
         </header>
+        <ol>
+          {this.state.reviews.map(review =><li key={review.id}>Name:{review.user_name} Content:{review.content}</li>)}
+          </ol>
         <h2 className="App-intro">Review Form</h2>
           <form onSubmit={this.submitReview}>
             <p>Name:</p>
@@ -51,11 +61,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    fetch('http://localhost:3001/reviews')
+    .then(response => response.json())
+    .then(data => {
+      this.setState ({
+        reviews: data
+      })
+    })
   }
-
-
-
+  
 }
 
 export default App;
