@@ -23,6 +23,14 @@ const Menu = () => {
         }}
         >Home</NavLink>
         <NavLink
+        to="/about"
+        exact
+        style={link}
+        activestyle={{
+          background: 'black'
+        }}
+        >About</NavLink>
+        <NavLink
         to="/trailer"
         exact
         style={link}
