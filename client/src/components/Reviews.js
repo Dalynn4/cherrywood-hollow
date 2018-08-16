@@ -4,12 +4,6 @@ import { fetchReviews } from '../actions/fetchReviews'
 
 class Reviews extends Component {
 
-  //state = {
-  // userName: "Name",
-  //content: "Review or Comment",
-  //  reviews: []
-  //}
-
  componentDidMount() {
   this.props.fetchReviews
  }

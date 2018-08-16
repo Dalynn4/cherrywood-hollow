@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { newReview } from '../actions/newReview'
 
 class ReviewForm extends Component {
 
   state = {
     userName: "Name",
     content: "Review or Comment",
-    reviews: []
   }
 
   handleUserNameChange = (event) => { 
@@ -22,20 +23,8 @@ class ReviewForm extends Component {
 
   submitReview = (e)  => {
     e.preventDefault();
-    fetch('http://localhost:3001/reviews', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(this.state)
-    });
-    fetch('http://localhost:3001/reviews')
-    .then(response => response.json())
-    .then(data => {
-      this.setState ({
-        reviews: data
-      })
-    })
+    const review = this.state
+    this.props.newReview(review)
   }
 
   render() {
@@ -54,4 +43,10 @@ class ReviewForm extends Component {
   }
 }
 
-export default ReviewForm
+const mapDispatchToProps = dispatch => {
+  return {
+    newReview: dispatch(newReview())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ReviewForm)

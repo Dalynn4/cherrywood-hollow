@@ -12,7 +12,6 @@ const reviewsReducer = (state = intialState, action) => {
       break;
     }
     case "REVIEWS_FETCHED": {
-      console.log(action)
       return {...state, reviews: action.reviews}
       break;
     }

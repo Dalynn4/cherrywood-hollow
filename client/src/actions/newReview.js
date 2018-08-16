@@ -1,4 +1,4 @@
-export function newReview() {
+export function newReview(review) {
   return (dispatch) => {
     dispatch({type: "ADD_REVIEW"});
     return fetch('http://localhost:3001/reviews', {
@@ -6,7 +6,7 @@ export function newReview() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(this.state)
+      body: JSON.stringify(review)
     })
   }
 }
