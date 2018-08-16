@@ -2,11 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const link = {
-  width: '300px',
-  padding: '25px',
-  margin: '10 60px 60px',
-  background: 'darkblue',
-  color: 'red',
+  display: 'inline-block',
+  width: '23%',
+  padding: '10px',
+  margin: '10 10px 10px',
+  'background-image': 'url(http://racksaudiodesign.com/Racks_Audio_Design/profil_files/mahogany.jpg)',
+  color: 'silver',
+  'text-align': 'center',
+  'font-family': 'Playfair Display SC',
+  'font-size': '30px',
 }
 
 
@@ -47,6 +51,9 @@ const Menu = () => {
         }}
         >Reviews</NavLink>
       </div>
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+      </style>
     </div>
   )
 }
