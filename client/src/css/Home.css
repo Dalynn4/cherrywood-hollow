@@ -15,5 +15,7 @@
 .hooks {
   font-family: Playfair Display SC;
   color: silver;
-  text-align: center
-}
+  text-align: center;
+  font-size: 20px;
+
+  }
