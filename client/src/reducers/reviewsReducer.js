@@ -1,5 +1,3 @@
-import fetchReviews from '../actions/fetchReviews'
-import newReview from '../actions/newReview'
 
 const intialState = {
   userName: "Name",
@@ -14,6 +12,7 @@ const reviewsReducer = (state = intialState, action) => {
       break;
     }
     case "REVIEWS_FETCHED": {
+      console.log(action)
       return {...state, reviews: action.reviews}
       break;
     }

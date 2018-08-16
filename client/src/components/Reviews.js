@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { fetchReviews } from '../actions/fetchReviews'
 
 class Reviews extends Component {
 
@@ -9,21 +10,23 @@ class Reviews extends Component {
   //  reviews: []
   //}
 
- // componentDidMount() {
- //   fetch('http://localhost:3001/reviews')
- //   .then(response => response.json())
- //  .then(data => {
-  //    this.setState ({
-  //      reviews: data
-  //    })
-  //  })
-  //}
+ componentDidMount() {
+  this.props.fetchReviews
+ }
+
+ renderReviews = () => {
+   if (Array.isArray(this.props.reviews)) {
+     return this.props.reviews.map(review =><li key={review.id}>Name:{review.user_name} Content:{review.content}</li>)
+   }else {
+     return this.props.reviews
+   }
+ }
 
   render() {
     return (
-      <ol>
-      {this.props.reviews.map(review =><li key={review.id}>Name:{review.user_name} Content:{review.content}</li>)}
-      </ol>
+      <div>
+      {this.renderReviews()}
+      </div>
     )
   }
 }
@@ -31,6 +34,12 @@ class Reviews extends Component {
 const mapStateToProps = state => {
   return {
     reviews: state.reviews
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchReviews: dispatch(fetchReviews())
   }
 }
 
