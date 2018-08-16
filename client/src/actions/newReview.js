@@ -1,6 +1,6 @@
 export function newReview(review) {
   return (dispatch) => {
-    dispatch({type: "ADD_REVIEW"});
+    dispatch({type: "ADD_REVIEW", review});
     return fetch('http://localhost:3001/reviews', {
       method: "POST",
       headers: {

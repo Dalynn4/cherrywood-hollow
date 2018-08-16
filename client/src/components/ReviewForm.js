@@ -5,13 +5,13 @@ import { newReview } from '../actions/newReview'
 class ReviewForm extends Component {
 
   state = {
-    userName: "Name",
+    user_name: "Name",
     content: "Review or Comment",
   }
 
   handleUserNameChange = (event) => { 
     this.setState({
-      userName: event.target.value
+      user_name: event.target.value
     })
   }
 
@@ -33,7 +33,7 @@ class ReviewForm extends Component {
            <h2 className="App-intro">Review Form</h2>
           <form onSubmit={this.submitReview}>
             <p>Name:</p>
-              <input onChange={this.handleUserNameChange} value={this.state.userName} />
+              <input onChange={this.handleUserNameChange} value={this.state.user_name} />
             <p>Review or Comment:</p>
               <input onChange={this.handleContentChange} value={this.state.content} />
             <input  type="submit" />
@@ -45,7 +45,7 @@ class ReviewForm extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    newReview: dispatch(newReview())
+    newReview: review => dispatch(newReview(review))
   }
 }
 

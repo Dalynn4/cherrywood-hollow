@@ -16,6 +16,8 @@ const reviewsReducer = (state = intialState, action) => {
       break;
     }
     case "ADD_REVIEW": {
+      console.log(state)
+      debugger
       return {...state, reviews: state.reviews.concat(action.review)}
     }
     default:
