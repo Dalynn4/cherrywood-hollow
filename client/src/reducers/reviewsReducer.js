@@ -1,6 +1,6 @@
 
 const intialState = {
-  userName: "Name",
+  user_name: "Name",
   content: "Review or Comment",
   reviews: []
 }
@@ -9,15 +9,11 @@ const reviewsReducer = (state = intialState, action) => {
   switch (action.type) {
     case "FETCH_REVIEWS_START": {
       return {...state, reviews: "Loading Reviews"}
-      break;
     }
     case "REVIEWS_FETCHED": {
       return {...state, reviews: action.reviews}
-      break;
     }
     case "ADD_REVIEW": {
-      console.log(state)
-      debugger
       return {...state, reviews: state.reviews.concat(action.review)}
     }
     default:
