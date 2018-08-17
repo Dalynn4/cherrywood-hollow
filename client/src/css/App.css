@@ -2,9 +2,19 @@
   height: 100%;
   width: 100%;
   background-image: url(https://geekandsundry.com/wp-content/uploads/2016/03/Humble_the_Brute_Feature_Image.jpg) ;
-  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: absolute;
+  display: table
+  }
+
+html, body { 
+  margin:0; 
+  padding:0; 
+  height:100%; 
 }

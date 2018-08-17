@@ -29,12 +29,11 @@ class ReviewForm extends Component {
 
   render() {
     return (
-      <div>
-           <h2 className="App-intro">Review Form</h2>
+      <div className="reviewform">
           <form onSubmit={this.submitReview}>
-            <p>Name:</p>
+            <p className="review">Name:</p>
               <input onChange={this.handleUserNameChange} value={this.state.user_name} />
-            <p>Review or Comment:</p>
+            <p className="review">Review or Comment:</p>
               <input onChange={this.handleContentChange} value={this.state.content} />
             <input  type="submit" />
             </form>

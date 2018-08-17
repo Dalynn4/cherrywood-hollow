@@ -10,7 +10,7 @@ class Reviews extends Component {
 
  renderReviews = () => {
    if (Array.isArray(this.props.reviews)) {
-     return this.props.reviews.map(review =><li key={review.id}>Name:{review.user_name} Content:{review.content}</li>)
+     return this.props.reviews.map(review =><li className="review" key={review.id}>{review.user_name}:<br/><p className="reviewcontent">{review.content}</p></li>)
    }else {
      return this.props.reviews
    }

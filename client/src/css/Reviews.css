@@ -1,0 +1,24 @@
+.reviewstag {
+  font-family: Playfair Display SC;
+  color: red;
+  text-align: center;
+  font-size: 25px
+}
+
+.review {
+  font-family: Playfair Display SC;
+  background-color: azure;
+  opacity: 0.5;
+  font-size: 20px;
+}
+
+.reviewcontent{
+  font-family: Playfair Display SC;
+  background-color: azure;
+  font-size: 15px;
+  border-bottom: 1px dashed black
+}
+
+.reviewform{
+  padding-bottom: 5px
+}
