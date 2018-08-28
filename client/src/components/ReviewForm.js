@@ -24,6 +24,7 @@ class ReviewForm extends Component {
   submitReview = (e)  => {
     e.preventDefault();
     const review = this.state
+   // console.log('A')
     this.props.newReview(review)
   }
 

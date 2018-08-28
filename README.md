@@ -1,24 +1,12 @@
 # README
+Cherrywood Hollow (React.js Project)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this app is to feature a mobile game that a user might see on their phone. The app contains multiple routes as well as a page that users can submit reviews and see all reviews for the game
 
-Things you may want to cover:
+View Gemfile to see what gems are used in this app.
 
-* Ruby version
+To get started, run bundle to install the gems required by the application, then type rake start into the console to start both the react server and the rails API
 
-* System dependencies
+-Randall Robinson
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-This project is licensed under the MIT License - see the LICENSE.md file for details

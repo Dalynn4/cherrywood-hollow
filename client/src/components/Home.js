@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/Home.css';
 
 
-class Home extends Component {
+const Home = () => {
 
-  render() {
     return (
       <div className="Home">
         <style>
@@ -20,6 +19,4 @@ class Home extends Component {
       </div>
     );
   }
-}
-
 export default Home;

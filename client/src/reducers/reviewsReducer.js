@@ -13,6 +13,9 @@ const reviewsReducer = (state = intialState, action) => {
     case "REVIEWS_FETCHED": {
       return {...state, reviews: action.reviews}
     }
+    case "ADD_REVIEW_START": {
+      return {...state, reviews: state.reviews}
+    }
     case "ADD_REVIEW": {
       return {...state, reviews: state.reviews.concat(action.review)}
     }

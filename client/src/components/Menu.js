@@ -6,11 +6,11 @@ const link = {
   width: '23%',
   padding: '10px',
   margin: '10 10px 10px',
-  'background-image': 'url(http://racksaudiodesign.com/Racks_Audio_Design/profil_files/mahogany.jpg)',
+  'backgroundImage': 'url(http://racksaudiodesign.com/Racks_Audio_Design/profil_files/mahogany.jpg)',
   color: 'silver',
-  'text-align': 'center',
-  'font-family': 'Playfair Display SC',
-  'font-size': '30px',
+  'textAlign': 'center',
+  'fontFamily': 'Playfair Display SC',
+  'fontSize': '30px',
 }
 
 
